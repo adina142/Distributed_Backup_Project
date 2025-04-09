@@ -1,13 +1,16 @@
 # Distributed_Backup_Project
-I am making Distributed Backup Project as my semester project for Design and Analysis of Algorithm.
+I am making Distributed Backup Project as my semester project for Design and Analysis of Algorithm. 
+
 **Project Overview**
 
 The Distributed Backup System is designed to automatically detect file changes on a local machine and upload them to  backup servers for secure storage. The system is fault-tolerant, and capable of handling large volumes of data efficiently. It uses a client-server architecture where clients send files or file chunks to the server, which then manages the storage and retrieval of the files.
+
 **Key Features**
 
 File Change Detection: Monitors files for changes (using file timestamps or hash checks).
 •	Distributed File Storage: Distributes files or chunks of files across multiple servers to balance the load.
 •	Fault Tolerance: Replicates file chunks to different servers, ensuring data integrity even in the event of server failures..
+
 **System Architecture**
 
 **Client-Side**
