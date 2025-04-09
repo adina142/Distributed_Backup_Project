@@ -8,7 +8,9 @@ The Distributed Backup System is designed to automatically detect file changes o
 **Key Features**
 
 File Change Detection: Monitors files for changes (using file timestamps or hash checks).
+
 •	Distributed File Storage: Distributes files or chunks of files across multiple servers to balance the load.
+
 •	Fault Tolerance: Replicates file chunks to different servers, ensuring data integrity even in the event of server failures..
 
 **System Architecture**
