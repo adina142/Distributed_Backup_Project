@@ -32,11 +32,14 @@ Load Handling:
 The server uses multithreading to handle multiple file backup requests concurrently. Each incoming file chunk is processed in a separate thread, allowing the server to handle multiple clients simultaneously.
 
 **Steps for Implementation**
-File Detection and Backup Creation: Detect file changes using timestamps or hash comparison. On detecting a change, break the file into smaller chunks and send each chunk to the server.
-Server-Side API:
-Implement a socket-based API to handle incoming connections from clients.When a file chunk is received, the server stores the chunk in a distributed manner and tracks it by its hash or metadata.
-Fault Tolerance: Implement replication of file chunks across multiple servers. If one server is unavailable, the system can still retrieve the file from another server where the chunk is replicated.
-Load Handling: Use multithreading or asynchronous operations to ensure the server can handle a large number of incoming requests concurrently. Distribute the file chunks across servers using a load-balancing mechanism, such as hashing or round-robin routing.
+
+**File Detection and Backup Creation:** Detect file changes using timestamps or hash comparison. On detecting a change, break the file into smaller chunks and send each chunk to the server.
+
+**Server-Side API:** Implement a socket-based API to handle incoming connections from clients.When a file chunk is received, the server stores the chunk in a distributed manner and tracks it by its hash or metadata.
+
+**Fault Tolerance:** Implement replication of file chunks across multiple servers. If one server is unavailable, the system can still retrieve the file from another server where the chunk is replicated.
+
+**Load Handling:** Use multithreading or asynchronous operations to ensure the server can handle a large number of incoming requests concurrently. Distribute the file chunks across servers using a load-balancing mechanism, such as hashing or round-robin routing.
 
 **Optional Cloud Sync Scalability**
 While the Distributed Backup System is capable of functioning in a local or small-scale setup, it can also be extended to the cloud for greater scalability and fault tolerance.
